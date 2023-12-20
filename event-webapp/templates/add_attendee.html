@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add a attendee to {{event.name}}</title>
+  </head>
+  <body>
+    <h3>Attendee form</h3>
+    <form action="/events/{{event.id}}/attendees/add" method="post">
+      <label for="firstname">Attendee First Name:</label>
+      <input type="text" id="firstname" name="first_name" />
+      <br>
+      <label for="lastname">Attendee Last Name:</label>
+      <input type="text" id="lastname" name="last_name" />
+      <br>
+      <label for="email">Attendee Email:</label>
+      <input type="text" id="email" name="email" />
+      <br>
+      <label for="number">Attendee Phone Number:</label>
+      <input type="text" id="number" name="phone_number" />
+      <br>
+      <input type="submit">
+    </form>
+  </body>
+</html>
+

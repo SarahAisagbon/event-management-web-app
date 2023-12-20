@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Attendee Details:</title>
+    </head>
+    <body>
+        <form action="/events/{{event}}/attendees/{{attendee}}/edit" method="post">
+            <label for="attendeedet">What attendee detail do you want to change?</label>
+            <input type="text" name="attendee_details" placeholder="Attendee Details">
+            <br>
+            <label for="new">New Value</label>
+            <input type="text" name="new_value" placeholder="New Value">
+            <br>
+            <button type="submit">Enter</button>
+        </form>
+    </body>
+</html>

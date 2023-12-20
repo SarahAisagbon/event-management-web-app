@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add an Event</title>
+  </head>
+  <body>
+    <h3>Event form</h3>
+    <form action="/events/add" method="post">
+      <label for="eventname">Event Name:</label>
+      <input type="text" id="eventname" name="name" />
+      <br>
+      <label for="starttime">Start Time:</label>
+      <input type="text" id="starttime" name="start_time" />
+      <br>
+      <label for="endtime">End Time:</label>
+      <input type="text" id="endtime" name="end_time" />
+      <br>
+      <label for="location">Event Location:</label>
+      <input type="text" id="location" name="location" />
+      <br>
+      <label for="budget">Budget:</label>
+      <input type="text" id="budget" name="budget" />
+      <br>
+      <input type="submit">
+    </form>
+  </body>
+</html>

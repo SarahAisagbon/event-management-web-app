@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <span class="title">
+        <h1>{% block title %} {{ attendee.first_name }} {{ attendee.last_name }}{% endblock %}</h1>
+    </span>
+    <div class="content">
+            <div class="event">
+                <p>Attendee Id: {{ attendee.id }}</p>
+                <p>Attendee First Name: #{{ attendee.first_name }}</p>
+                <p>Attendee Last Name: #{{ attendee.last_name }}</p>
+                <p>Attendee Email: {{ attendee_email }}</p>
+                <p>Attendee Phone Number: {{ attendee_number }}</p>
+                <p>Event Id: {{ attendee.event_id }}</p>
+            </div>
+    </div>

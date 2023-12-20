@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <span class="title">
+        <h1>{% block title %} {{ event.name }}{% endblock %}</h1>
+    </span>
+    <div class="content">
+            <div class="event">
+                <p>Event Id: #{{ event.id }}</p>
+                <p>Event Name: {{ event.name }}</p>
+                <p>Start Time: {{ event.start_time }}</p>
+                <p>End Time: {{ event.end_time }}</p>
+                <p>Location: {{ event.location }}</p>
+                <p>Budget: {{ event.budget }}</p>
+            </div>
+    </div>

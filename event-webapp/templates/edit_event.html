@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Event</title>
+    </head>
+    <body>
+        <form action="/events/{{data}}/edit" method="post">
+            <label for="eventdet">What event detail do you want to change?</label>
+            <input type="text" name="event_feature" placeholder="Event Feature">
+            <br>
+            <label for="new">New Value</label>
+            <input type="text" name="new_value" placeholder="New Value">
+            <br>
+            <button type="submit">Enter</button>
+        </form>
+    </body>
+</html>

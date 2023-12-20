@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <a href="/events/add">ADD</a>
+    <br>
+    <table>
+       <thead>
+          <th>Event Id</th>
+          <th>Event Name</th>
+          <th>  </th>
+          <th>  </th>
+          <th>  </th>
+          <th>  </th>
+       </thead>
+       {% for data in events %}
+       <tbody>
+          <td>{{data.id}}</td>
+          <td>{{data.name}}</td>
+          <td><a href="/events/{{data.id}}" type="button">View</a></td>
+          <td><a href="/events/{{data.id}}/delete" type="button">Delete</a></td>
+          <td><a href="/events/{{data.id}}/edit" type="button">Edit</a></td>
+          <td><a href="/events/{{data.id}}/attendees" type="button">Attendees</a></td>
+       </tbody>
+       {% endfor%}
+    </table>
+    <br>
+    <a href="/">Home Page</a>
+  </body>
+</html>

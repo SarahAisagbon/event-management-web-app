@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Attendees for {{event_name}} </h1>
+  </head>
+  <style>
+    h1 {color: #0C0C64;
+      text-align: center}
+    
+    body{
+      font-family: 'Optima', sans-serif;
+      height:100vh;
+      display:grid;
+      justify-content:center;
+      align-items:center;
+      background-color: #FFE53B;
+      font_size:0.9rem;
+      background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 100%);
+    }
+
+    a{color: #064A06;}
+
+    table{
+      border-collapse:collapse;
+      table-layout: auto;
+      text-align:center;
+      vertical-align: middle;
+      
+    }
+
+    table, tr, td, th{
+      border:none;
+    }
+
+      thead{
+        background-color: #06064A;
+        color: #AAAAF2;
+        box-shadow:0 5px 10px #e1e5ee;
+        padding:10px;
+        text-transform:uppercase;
+        letter-spacing:1%;
+        font-size:0.7rem;
+        font-weight:900;
+      }
+
+      tbody{background-color: #AAAAF2;
+        color: #06064A;
+        font-size:0.7rem;}
+
+      td{padding:10px;}
+      
+      button{
+        border: 2px solid #AEA8D3;
+        color: #FFF;
+      }
+      button:after {
+        border: 3px solid #AEA8D3;
+        opacity: 0;
+        -moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+        -ms-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+        -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+        transform: translateY(-50%) translateX(-50%) rotate(90deg);
+      }
+      button:hover:after {
+        height: 600% !important;
+        opacity: 1;
+        color: #FFF;
+      }
+
+      tbody:hover {background-color:#E6E6F5;}
+  </style>
+  <body>
+    <a href="/events/{{event}}/attendees/add">ADD</a>
+    <br>
+    <table border = "1" cellpadding = "20" width = "100%">
+      <thead>
+        <th>Id</th>
+        <th>Attendee Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>ACTIONS</th>
+      </thead>
+      {% for data in attendees %}
+      <tbody>
+        <td>{{data.id}}</td>
+        <td>{{data.first_name}} {{data.last_name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.phone}}</td>
+        <td>
+          <a href="/events/{{event}}/attendees/{{data.id}}/edit"> <button class="btn btn-sm" type="button">Edit</button></a>
+          <a href="/events/{{event}}/attendees/{{data.id}}/delete"> <button style="background:red;color:white;" class="btn-danger" type="button">Delete</button></a>
+        </td>
+      </tbody>
+      {% endfor%}
+    </table>
+    <br>
+    <a href="/">Home Page</a>
+  </body>
+</html>
