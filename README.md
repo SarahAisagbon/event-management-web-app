@@ -1,2 +1,3 @@
-# data-analysis-sql-SarahAisagbon
-# python-data-assessment-SarahAisagbon
+# event-management-web-app
+## This is a web application version of the event-management-project.
+
